@@ -4,14 +4,15 @@
 #
 Name     : R-bazar
 Version  : 1.0.11
-Release  : 9
+Release  : 10
 URL      : https://cran.r-project.org/src/contrib/bazar_1.0.11.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/bazar_1.0.11.tar.gz
 Summary  : Miscellaneous Basic Functions
 Group    : Development/Tools
 License  : GPL-3.0
-Requires: R-kimisc
+Requires: R-memoise
 BuildRequires : R-kimisc
+BuildRequires : R-memoise
 BuildRequires : buildreq-R
 
 %description
@@ -26,10 +27,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552791949
+export SOURCE_DATE_EPOCH=1556465012
 
 %install
-export SOURCE_DATE_EPOCH=1552791949
+export SOURCE_DATE_EPOCH=1556465012
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -65,7 +66,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc  bazar || :
+R CMD check --no-manual --no-examples --no-codoc bazar || :
 
 
 %files
