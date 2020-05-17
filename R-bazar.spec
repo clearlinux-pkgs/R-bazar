@@ -4,7 +4,7 @@
 #
 Name     : R-bazar
 Version  : 1.0.11
-Release  : 19
+Release  : 20
 URL      : https://cran.r-project.org/src/contrib/bazar_1.0.11.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/bazar_1.0.11.tar.gz
 Summary  : Miscellaneous Basic Functions
@@ -13,29 +13,39 @@ License  : GPL-3.0
 Requires: R-kimisc
 BuildRequires : R-kimisc
 BuildRequires : buildreq-R
-BuildRequires : util-linux
 
 %description
-# bazar: miscellaneous basic R functions
-[![Travis-CI Build Status](https://travis-ci.org/paulponcet/bazar.svg?branch=master)](https://travis-ci.org/paulponcet/bazar) [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/bazar)](https://cran.r-project.org/package=bazar) [![](https://cranlogs.r-pkg.org/badges/bazar)](https://cran.r-project.org/package=bazar)
+copying objects to the clipboard ('Copy');
+    manipulating strings ('concat', 'mgsub', 'trim', 'verlan'); 
+    loading or showing packages ('library_with_dep', 'require_with_dep', 
+    'sessionPackages'); 
+    creating or testing for named lists ('nlist', 'as.nlist', 'is.nlist'), 
+    formulas ('is.formula'), empty objects ('as.empty', 'is.empty'), 
+    whole numbers ('as.wholenumber', 'is.wholenumber'); 
+    testing for equality ('almost.equal', 'almost.zero') and computing 
+    uniqueness ('almost.unique'); 
+    getting modified versions of usual functions ('rle2', 'sumNA'); 
+    making a pause or a stop ('pause', 'stopif'); 
+    converting into a function ('as.fun');
 
 %prep
 %setup -q -c -n bazar
+cd %{_builddir}/bazar
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571799730
+export SOURCE_DATE_EPOCH=1589748753
 
 %install
-export SOURCE_DATE_EPOCH=1571799730
+export SOURCE_DATE_EPOCH=1589748753
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
