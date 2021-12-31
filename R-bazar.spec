@@ -4,7 +4,7 @@
 #
 Name     : R-bazar
 Version  : 1.0.11
-Release  : 33
+Release  : 34
 URL      : https://cran.r-project.org/src/contrib/bazar_1.0.11.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/bazar_1.0.11.tar.gz
 Summary  : Miscellaneous Basic Functions
@@ -37,10 +37,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1640894657
+export SOURCE_DATE_EPOCH=1640976514
 
 %install
-export SOURCE_DATE_EPOCH=1640894657
+export SOURCE_DATE_EPOCH=1640976514
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
