@@ -4,7 +4,7 @@
 #
 Name     : R-bazar
 Version  : 1.0.11
-Release  : 43
+Release  : 44
 URL      : https://cran.r-project.org/src/contrib/bazar_1.0.11.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/bazar_1.0.11.tar.gz
 Summary  : Miscellaneous Basic Functions
